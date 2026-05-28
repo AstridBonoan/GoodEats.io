@@ -24,7 +24,7 @@ export default function Footer() {
               href={SITE_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block rounded-lg bg-warm-white px-3 py-2"
+              className="inline-block"
             >
               <Logo className="h-10 w-auto max-w-[160px] object-contain" />
             </a>
