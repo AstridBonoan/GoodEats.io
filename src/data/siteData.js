@@ -264,24 +264,46 @@ export const GALLERY_IMAGES = [
   { src: IMAGES.storefront, alt: 'Good Eats storefront on Grand Ave, Maspeth' },
 ]
 
+export const GOOGLE_REVIEWS_URL =
+  'https://www.google.com/maps/search/?api=1&query=Good+Eats+Diner+69-32+Grand+Ave+Maspeth+NY'
+
 export const REVIEWS = [
   {
     id: 1,
     name: 'Tony K.',
     rating: 5,
+    source: 'Google',
     text: 'Great local diner! I haven\'t had a bad meal here yet. The OMG sandwich was delicious, messy, but delicious. We also got an omelette with spinach, jalapeños, mushrooms and cheese.',
   },
   {
     id: 2,
     name: 'Melody A.',
     rating: 5,
-    text: 'My new favorite is the ricotta toast with fig jam and eggs — chilli flakes and a baked sweet potato on the side. This place makes me happy dance while I eat.',
+    source: 'Google',
+    text: 'My new favorite is the ricotta toast which has fig jam and eggs on ricotta toast with chilli flakes and a baked sweet potato on the side. This place makes me happy dance while I eat.',
   },
   {
     id: 3,
     name: 'Max H.',
     rating: 5,
-    text: 'The staff is so friendly and the food was delicious — their cheese fries are impeccable. The portions are enormous and I had a ton of leftovers. Incredibly reasonably priced for the quality.',
+    source: 'Google',
+    text: 'The staff is so friendly and the food was DELICIOUS, their cheese fries are impeccable. The portions are enormous and I had a ton of leftovers, for the amount that arrived and the quality it\'s incredibly reasonably priced.',
+  },
+  {
+    id: 4,
+    name: 'Google Guest',
+    rating: 5,
+    source: 'Google',
+    date: 'May 2023',
+    text: 'The food is always delish at Good Eats, their portions are huge. I had a brunch special today — Breakfast in Bed — it was amazing. Took half of it home!',
+  },
+  {
+    id: 5,
+    name: 'Google Guest',
+    rating: 4,
+    source: 'Google',
+    date: 'Aug 2022',
+    text: 'Very good breakfast! Many options on the menu. Service was somewhat slow but they were very busy and definitely could use more waitresses.',
   },
 ]
 
