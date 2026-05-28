@@ -31,7 +31,7 @@ export default function Navbar() {
           href="#"
           className="shrink-0 rounded-lg bg-transparent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-diner-orange"
         >
-          <Logo variant="header" />
+          <Logo />
         </a>
 
         <ul className="hidden items-center gap-6 lg:flex">
