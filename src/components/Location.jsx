@@ -19,7 +19,7 @@ export default function Location() {
         <p className="mt-1 text-charcoal-light">69-32 Grand Ave · Maspeth, Queens</p>
 
         <div className="mt-6 grid gap-5 lg:grid-cols-2 lg:items-start">
-          <div className="h-fit overflow-hidden rounded-2xl border border-chrome-light shadow-sm lg:sticky lg:top-24">
+          <div className="h-fit overflow-hidden rounded-2xl border border-chrome-light shadow-sm">
             <iframe
               title="Good Eats location on Google Maps — 69-32 Grand Ave, Maspeth"
               src={MAP_EMBED}
