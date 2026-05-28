@@ -22,13 +22,16 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-warm-white/95 shadow-md backdrop-blur-sm' : 'bg-warm-white/80 backdrop-blur-sm'
+      className={`fixed top-0 left-0 right-0 z-50 border-b border-transparent transition-all duration-300 ${
+        scrolled ? 'border-chrome-light bg-warm-white shadow-sm' : 'bg-warm-white'
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2.5 md:px-6 md:py-3" aria-label="Main">
-        <a href="#" className="shrink-0 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-diner-orange">
-          <Logo />
+        <a
+          href="#"
+          className="shrink-0 rounded-lg bg-transparent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-diner-orange"
+        >
+          <Logo variant="header" />
         </a>
 
         <ul className="hidden items-center gap-6 lg:flex">
