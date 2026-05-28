@@ -8,7 +8,9 @@ import {
   HOURS,
   ORDER_URL,
   COPYRIGHT,
+  SITE_URL,
 } from '../data/siteData'
+import Logo from './Logo'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -18,10 +20,15 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-12 md:px-6">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <p className="font-heading text-2xl font-bold text-white">
-              Good <span className="text-diner-orange">Eats</span>
-            </p>
-            <p className="mt-3 text-sm leading-relaxed">
+            <a
+              href={SITE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block rounded-lg bg-warm-white px-3 py-2"
+            >
+              <Logo className="h-10 w-auto max-w-[160px] object-contain" />
+            </a>
+            <p className="mt-4 text-sm leading-relaxed">
               Good food, good life — hearty American favorites in Maspeth. Dine in, takeout, or delivery
               daily 8 AM – 8:30 PM.
             </p>

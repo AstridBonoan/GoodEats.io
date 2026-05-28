@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { NAV_LINKS, ORDER_URL } from '../data/siteData'
 import { IconMenu, IconClose } from './Icons'
+import Logo from './Logo'
 
 function NavAnchor({ link, onClick, className }) {
   const props = link.external
@@ -36,14 +37,9 @@ export default function Navbar() {
         scrolled ? 'bg-warm-white/95 shadow-md backdrop-blur-sm' : 'bg-warm-white/80 backdrop-blur-sm'
       }`}
     >
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6" aria-label="Main">
-        <a href="#" className="group flex items-center gap-2">
-          <span className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-chrome bg-cream font-heading text-lg font-bold text-diner-red">
-            GE
-          </span>
-          <span className="font-heading text-xl font-bold tracking-wide text-charcoal md:text-2xl">
-            Good <span className="text-diner-red">Eats</span>
-          </span>
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2.5 md:px-6 md:py-3" aria-label="Main">
+        <a href="#" className="shrink-0 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-diner-orange">
+          <Logo />
         </a>
 
         <ul className="hidden items-center gap-6 lg:flex">
@@ -51,7 +47,7 @@ export default function Navbar() {
             <li key={link.href + link.label}>
               <NavAnchor
                 link={link}
-                className="text-sm font-semibold text-charcoal-light transition-colors hover:text-diner-red"
+                className="text-sm font-semibold text-charcoal-light transition-colors hover:text-diner-orange"
               />
             </li>
           ))}
@@ -62,7 +58,7 @@ export default function Navbar() {
             href={ORDER_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden rounded-full bg-diner-red px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-diner-orange md:inline-block"
+            className="hidden rounded-full bg-diner-orange px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-diner-red md:inline-block"
           >
             Order Online
           </a>
@@ -95,7 +91,7 @@ export default function Navbar() {
                 href={ORDER_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-2 block rounded-full bg-diner-red px-4 py-3 text-center font-bold text-white"
+                className="mt-2 block rounded-full bg-diner-orange px-4 py-3 text-center font-bold text-white"
                 onClick={() => setOpen(false)}
               >
                 Order Online
