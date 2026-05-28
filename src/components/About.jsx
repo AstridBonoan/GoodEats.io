@@ -46,8 +46,6 @@ export default function About() {
             </ul>
             <a
               href={MENU_URL}
-              target="_blank"
-              rel="noopener noreferrer"
               className="mt-8 inline-flex min-h-[48px] items-center justify-center rounded-full bg-diner-red px-6 py-3 font-bold text-white transition-colors hover:bg-diner-orange"
             >
               Explore Our Menu

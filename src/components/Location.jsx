@@ -95,8 +95,6 @@ export default function Location() {
 
             <a
               href={ORDER_URL}
-              target="_blank"
-              rel="noopener noreferrer"
               className="flex min-h-[52px] items-center justify-center rounded-full bg-diner-red font-bold text-white transition-colors hover:bg-diner-orange"
             >
               Order Online

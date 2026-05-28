@@ -1,6 +1,6 @@
 # Good Eats — Diner Website Redesign Demo
 
-Modern, mobile-first redesign demo for **Good Eats**, a neighborhood diner in Maspeth, Queens.
+Modern, mobile-first website for **Good Eats**, a neighborhood diner in Maspeth, Queens.
 
 ## Stack
 

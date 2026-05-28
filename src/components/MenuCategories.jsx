@@ -67,16 +67,15 @@ export default function MenuCategories() {
           <div>
             <h2 className="font-heading text-3xl font-bold text-charcoal md:text-4xl">Our Menu</h2>
             <p className="mt-2 max-w-xl text-charcoal-light">
-              Breakfast, lunch, and dinner — scan a sample below or browse the full menu online.
+              Breakfast, lunch, and dinner — scan a sample below. Full menu available when you order
+              online or dine in.
             </p>
           </div>
           <a
             href={MENU_URL}
-            target="_blank"
-            rel="noopener noreferrer"
             className="inline-flex min-h-[48px] shrink-0 items-center justify-center rounded-full border-2 border-diner-red px-6 py-2.5 font-bold text-diner-red transition-colors hover:bg-diner-red hover:text-white"
           >
-            Full Menu Online
+            Browse Menu
           </a>
         </div>
 
@@ -109,15 +108,7 @@ export default function MenuCategories() {
         </div>
 
         <p className="mt-8 text-center text-sm text-charcoal-light">
-          Prices and availability may vary.{' '}
-          <a
-            href={MENU_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-diner-red hover:text-diner-orange"
-          >
-            See full menu at goodeatsdinerny.com
-          </a>
+          Prices and availability may vary. Ask your server about daily specials.
         </p>
       </div>
     </section>

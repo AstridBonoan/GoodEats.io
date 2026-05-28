@@ -13,8 +13,6 @@ export default function FeaturedDishes() {
           </div>
           <a
             href={MENU_URL}
-            target="_blank"
-            rel="noopener noreferrer"
             className="inline-flex min-h-[44px] shrink-0 items-center justify-center rounded-full border-2 border-diner-red px-5 py-2 font-bold text-diner-red transition-colors hover:bg-diner-red hover:text-white"
           >
             View Full Menu
@@ -43,8 +41,6 @@ export default function FeaturedDishes() {
                 <p className="mt-2 text-sm leading-relaxed text-charcoal-light">{dish.description}</p>
                 <a
                   href={ORDER_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="mt-4 flex min-h-[44px] w-full items-center justify-center rounded-full bg-diner-red text-sm font-bold text-white transition-colors hover:bg-diner-orange"
                 >
                   Order Now

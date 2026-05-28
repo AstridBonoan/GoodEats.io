@@ -1,4 +1,4 @@
-import { ORDER_URL, PHONE_HREF, SITE_URL } from '../data/siteData'
+import { ORDER_URL, PHONE_HREF } from '../data/siteData'
 
 export default function OrderingCTA() {
   return (
@@ -8,22 +8,18 @@ export default function OrderingCTA() {
           Hungry? Order Online Now
         </h2>
         <p className="mx-auto mt-4 max-w-lg text-cream-dark">
-          Ordering from our website is quick and easy — choose your favorites for pickup or delivery.
-          Same big portions, same neighborhood diner you love.
+          Choose your favorites for pickup or delivery. Same big portions, same neighborhood diner you
+          love — ready when you are.
         </p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center sm:gap-4">
           <a
             href={ORDER_URL}
-            target="_blank"
-            rel="noopener noreferrer"
             className="inline-flex min-h-[52px] items-center justify-center rounded-full bg-diner-red px-8 py-3.5 font-bold text-white transition-colors hover:bg-diner-orange"
           >
             Delivery
           </a>
           <a
             href={ORDER_URL}
-            target="_blank"
-            rel="noopener noreferrer"
             className="inline-flex min-h-[52px] items-center justify-center rounded-full bg-warm-white px-8 py-3.5 font-bold text-charcoal transition-colors hover:bg-cream"
           >
             Pickup
@@ -36,14 +32,7 @@ export default function OrderingCTA() {
           </a>
         </div>
         <p className="mt-6 text-sm text-chrome">
-          <a
-            href={SITE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline transition-colors hover:text-white"
-          >
-            goodeatsdinerny.com
-          </a>
+          Online ordering coming soon — call ahead or visit us on Grand Ave today.
         </p>
       </div>
     </section>

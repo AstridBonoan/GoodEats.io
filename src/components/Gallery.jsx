@@ -2,7 +2,7 @@ import { GALLERY_IMAGES } from '../data/siteData'
 
 export default function Gallery() {
   return (
-    <section id="gallery" className="bg-cream py-14 md:py-20 scroll-mt-20">
+    <section id="gallery" className="scroll-mt-20 bg-cream py-14 md:py-20">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <div className="mb-8 text-center md:mb-10">
           <h2 className="font-heading text-3xl font-bold text-charcoal md:text-4xl">Inside Good Eats</h2>

@@ -8,7 +8,7 @@ import {
   HOURS,
   ORDER_URL,
   COPYRIGHT,
-  SITE_URL,
+  ROUTES,
 } from '../data/siteData'
 import Logo from './Logo'
 
@@ -20,12 +20,7 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-12 md:px-6">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <a
-              href={SITE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block"
-            >
+            <a href={ROUTES.home} className="inline-block">
               <Logo className="h-10 w-auto max-w-[160px] object-contain" />
             </a>
             <p className="mt-4 text-sm leading-relaxed">
@@ -39,22 +34,13 @@ export default function Footer() {
             <ul className="mt-4 space-y-2">
               {FOOTER_LINKS.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-sm transition-colors hover:text-white"
-                    {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                  >
+                  <a href={link.href} className="text-sm transition-colors hover:text-white">
                     {link.label}
                   </a>
                 </li>
               ))}
               <li>
-                <a
-                  href={ORDER_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-semibold text-diner-orange transition-colors hover:text-white"
-                >
+                <a href={ORDER_URL} className="text-sm font-semibold text-diner-orange transition-colors hover:text-white">
                   Order Online
                 </a>
               </li>
@@ -94,7 +80,6 @@ export default function Footer() {
           <p>
             &copy; {year} {COPYRIGHT} All rights reserved.
           </p>
-          <p className="mt-1 text-xs">Website redesign demo · Menu & ordering via goodeatsdinerny.com</p>
         </div>
       </div>
     </footer>

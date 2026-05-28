@@ -3,17 +3,6 @@ import { NAV_LINKS, ORDER_URL } from '../data/siteData'
 import { IconMenu, IconClose } from './Icons'
 import Logo from './Logo'
 
-function NavAnchor({ link, onClick, className }) {
-  const props = link.external
-    ? { target: '_blank', rel: 'noopener noreferrer' }
-    : {}
-  return (
-    <a href={link.href} className={className} onClick={onClick} {...props}>
-      {link.label}
-    </a>
-  )
-}
-
 export default function Navbar() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
@@ -45,10 +34,12 @@ export default function Navbar() {
         <ul className="hidden items-center gap-6 lg:flex">
           {NAV_LINKS.map((link) => (
             <li key={link.href + link.label}>
-              <NavAnchor
-                link={link}
+              <a
+                href={link.href}
                 className="text-sm font-semibold text-charcoal-light transition-colors hover:text-diner-orange"
-              />
+              >
+                {link.label}
+              </a>
             </li>
           ))}
         </ul>
@@ -56,8 +47,6 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <a
             href={ORDER_URL}
-            target="_blank"
-            rel="noopener noreferrer"
             className="hidden rounded-full bg-diner-orange px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-diner-red md:inline-block"
           >
             Order Online
@@ -79,18 +68,18 @@ export default function Navbar() {
           <ul className="flex flex-col gap-1">
             {NAV_LINKS.map((link) => (
               <li key={link.href + link.label}>
-                <NavAnchor
-                  link={link}
-                  onClick={() => setOpen(false)}
+                <a
+                  href={link.href}
                   className="block rounded-lg px-3 py-3 text-base font-semibold text-charcoal hover:bg-cream"
-                />
+                  onClick={() => setOpen(false)}
+                >
+                  {link.label}
+                </a>
               </li>
             ))}
             <li>
               <a
                 href={ORDER_URL}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="mt-2 block rounded-full bg-diner-orange px-4 py-3 text-center font-bold text-white"
                 onClick={() => setOpen(false)}
               >

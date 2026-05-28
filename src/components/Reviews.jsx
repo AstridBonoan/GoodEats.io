@@ -3,7 +3,7 @@ import { IconStar } from './Icons'
 
 export default function Reviews() {
   return (
-    <section id="reviews" className="bg-warm-white py-14 md:py-20 scroll-mt-20">
+    <section id="reviews" className="scroll-mt-20 bg-warm-white py-14 md:py-20">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <div className="mb-8 text-center md:mb-10">
           <h2 className="font-heading text-3xl font-bold text-charcoal md:text-4xl">

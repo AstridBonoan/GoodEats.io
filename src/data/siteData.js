@@ -1,12 +1,20 @@
-export const SITE_URL = 'https://goodeatsdinerny.com/'
-export const MENU_URL = 'https://goodeatsdinerny.com/menu'
-export const ORDER_URL = 'https://goodeatsdinerny.com/menu'
-export const STORY_URL = 'https://goodeatsdinerny.com/story'
-export const EVENTS_URL = 'https://goodeatsdinerny.com/events'
-export const CAREERS_URL = 'https://goodeatsdinerny.com/careers'
-export const GIFT_CARDS_URL = 'https://goodeatsdinerny.com/gift-cards'
-export const CONTACT_URL = 'https://goodeatsdinerny.com/page/contact-us'
-export const REWARDS_URL = 'https://goodeatsdinerny.com/'
+export const ROUTES = {
+  home: '#',
+  menu: '#menu',
+  order: '#order',
+  about: '#about',
+  events: '#events',
+  careers: '#careers',
+  giftCards: '#gift-cards',
+  rewards: '#rewards',
+  gallery: '#gallery',
+  reviews: '#reviews',
+  location: '#location',
+}
+
+export const ORDER_URL = ROUTES.order
+export const MENU_URL = ROUTES.menu
+export const REWARDS_URL = ROUTES.rewards
 
 export const PHONE = '(718) 478-2420'
 export const PHONE_HREF = 'tel:+17184782420'
@@ -253,22 +261,24 @@ export const REVIEWS = [
 ]
 
 export const NAV_LINKS = [
-  { href: '#menu', label: 'Menu', external: false },
-  { href: '#about', label: 'Our Story', external: false },
-  { href: EVENTS_URL, label: 'Events', external: true },
-  { href: CAREERS_URL, label: "We're Hiring", external: true },
-  { href: GIFT_CARDS_URL, label: 'Gift Cards', external: true },
-  { href: '#location', label: 'Contact', external: false },
+  { href: ROUTES.menu, label: 'Menu' },
+  { href: ROUTES.about, label: 'Our Story' },
+  { href: ROUTES.events, label: 'Events' },
+  { href: ROUTES.careers, label: "We're Hiring" },
+  { href: ROUTES.giftCards, label: 'Gift Cards' },
+  { href: ROUTES.location, label: 'Contact' },
 ]
 
 export const FOOTER_LINKS = [
-  { href: SITE_URL, label: 'Home', external: true },
-  { href: MENU_URL, label: 'Menu', external: true },
-  { href: STORY_URL, label: 'Our Story', external: true },
-  { href: EVENTS_URL, label: 'Events', external: true },
-  { href: CAREERS_URL, label: "We're Hiring", external: true },
-  { href: GIFT_CARDS_URL, label: 'Gift Cards', external: true },
-  { href: CONTACT_URL, label: 'Contact Us', external: true },
+  { href: ROUTES.home, label: 'Home' },
+  { href: ROUTES.menu, label: 'Menu' },
+  { href: ROUTES.about, label: 'Our Story' },
+  { href: ROUTES.events, label: 'Events' },
+  { href: ROUTES.careers, label: "We're Hiring" },
+  { href: ROUTES.giftCards, label: 'Gift Cards' },
+  { href: ROUTES.location, label: 'Contact Us' },
 ]
+
+export const GIFT_CARD_AMOUNTS = ['$10', '$25', '$50', '$75', '$100']
 
 export const COPYRIGHT = 'GAV REST CORP.'

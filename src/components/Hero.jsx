@@ -30,16 +30,12 @@ export default function Hero() {
         <div className="animate-fade-in-delay mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
           <a
             href={MENU_URL}
-            target="_blank"
-            rel="noopener noreferrer"
             className="inline-flex min-h-[52px] items-center justify-center rounded-full bg-diner-red px-8 py-3.5 text-center font-bold text-white transition-colors hover:bg-diner-orange"
           >
             View Menu
           </a>
           <a
             href={ORDER_URL}
-            target="_blank"
-            rel="noopener noreferrer"
             className="inline-flex min-h-[52px] items-center justify-center rounded-full border-2 border-chrome-light bg-white/10 px-8 py-3.5 text-center font-bold text-white backdrop-blur-sm transition-colors hover:bg-white/20"
           >
             Order Online
