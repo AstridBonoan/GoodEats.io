@@ -14,10 +14,12 @@ import Careers from './components/Careers'
 import Location from './components/Location'
 import Footer from './components/Footer'
 import StickyOrderButton from './components/StickyOrderButton'
+import Watermark from './components/Watermark'
 
 export default function App() {
   return (
     <>
+      <Watermark />
       <Navbar />
       <main className="pb-20 md:pb-0">
         <Hero />
