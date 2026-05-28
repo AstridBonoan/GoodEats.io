@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { MENU_CATEGORIES, ORDER_URL } from '../data/siteData'
+import { MENU_CATEGORIES, MENU_URL, MENU_HIGHLIGHTS } from '../data/siteData'
 
 function CategoryAccordion({ category, isOpen, onToggle }) {
   return (
@@ -61,21 +61,34 @@ export default function MenuCategories() {
   const [openId, setOpenId] = useState(MENU_CATEGORIES[0]?.id)
 
   return (
-    <section id="menu" className="bg-cream py-14 md:py-20 scroll-mt-20">
+    <section id="menu" className="scroll-mt-20 bg-cream py-14 md:py-20">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
-        <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between md:mb-10">
+        <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between md:mb-8">
           <div>
             <h2 className="font-heading text-3xl font-bold text-charcoal md:text-4xl">Our Menu</h2>
             <p className="mt-2 max-w-xl text-charcoal-light">
-              Scan fast, order faster. Breakfast through dinner — generous portions, diner prices.
+              Breakfast, lunch, and dinner — scan a sample below or browse the full menu online.
             </p>
           </div>
           <a
-            href={ORDER_URL}
+            href={MENU_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex min-h-[48px] shrink-0 items-center justify-center rounded-full border-2 border-diner-red px-6 py-2.5 font-bold text-diner-red transition-colors hover:bg-diner-red hover:text-white"
           >
             Full Menu Online
           </a>
+        </div>
+
+        <div className="mb-8 flex flex-wrap gap-2">
+          {MENU_HIGHLIGHTS.map((label) => (
+            <span
+              key={label}
+              className="rounded-full border border-chrome-light bg-warm-white px-3 py-1.5 text-xs font-semibold text-charcoal-light"
+            >
+              {label}
+            </span>
+          ))}
         </div>
 
         <div className="space-y-3 md:hidden">
@@ -94,6 +107,18 @@ export default function MenuCategories() {
             <CategoryCard key={cat.id} category={cat} />
           ))}
         </div>
+
+        <p className="mt-8 text-center text-sm text-charcoal-light">
+          Prices and availability may vary.{' '}
+          <a
+            href={MENU_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-diner-red hover:text-diner-orange"
+          >
+            See full menu at goodeatsdinerny.com
+          </a>
+        </p>
       </div>
     </section>
   )

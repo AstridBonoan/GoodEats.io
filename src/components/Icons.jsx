@@ -71,11 +71,25 @@ export function IconClose({ className = 'w-6 h-6' }) {
   )
 }
 
+export function IconUtensils({ className = 'w-5 h-5' }) {
+  return (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden>
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M12 6v14m-4-4h8M8 6c0-2.21 1.79-4 4-4s4 1.79 4 4M6 10h12"
+      />
+    </svg>
+  )
+}
+
 const ICON_MAP = {
   clock: IconClock,
   truck: IconTruck,
   bag: IconBag,
   sun: IconSun,
+  utensils: IconUtensils,
 }
 
 export function QuickInfoIcon({ name, className }) {

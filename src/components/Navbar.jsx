@@ -2,6 +2,17 @@ import { useState, useEffect } from 'react'
 import { NAV_LINKS, ORDER_URL } from '../data/siteData'
 import { IconMenu, IconClose } from './Icons'
 
+function NavAnchor({ link, onClick, className }) {
+  const props = link.external
+    ? { target: '_blank', rel: 'noopener noreferrer' }
+    : {}
+  return (
+    <a href={link.href} className={className} onClick={onClick} {...props}>
+      {link.label}
+    </a>
+  )
+}
+
 export default function Navbar() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
@@ -35,15 +46,13 @@ export default function Navbar() {
           </span>
         </a>
 
-        <ul className="hidden items-center gap-8 md:flex">
+        <ul className="hidden items-center gap-6 lg:flex">
           {NAV_LINKS.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
+            <li key={link.href + link.label}>
+              <NavAnchor
+                link={link}
                 className="text-sm font-semibold text-charcoal-light transition-colors hover:text-diner-red"
-              >
-                {link.label}
-              </a>
+              />
             </li>
           ))}
         </ul>
@@ -51,13 +60,15 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <a
             href={ORDER_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden rounded-full bg-diner-red px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-diner-orange md:inline-block"
           >
-            Order Now
+            Order Online
           </a>
           <button
             type="button"
-            className="rounded-lg p-2 text-charcoal md:hidden"
+            className="rounded-lg p-2 text-charcoal lg:hidden"
             onClick={() => setOpen(!open)}
             aria-expanded={open}
             aria-label={open ? 'Close menu' : 'Open menu'}
@@ -68,26 +79,26 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div className="border-t border-chrome-light bg-warm-white px-4 py-4 md:hidden">
+        <div className="border-t border-chrome-light bg-warm-white px-4 py-4 lg:hidden">
           <ul className="flex flex-col gap-1">
             {NAV_LINKS.map((link) => (
-              <li key={link.href}>
-                <a
-                  href={link.href}
-                  className="block rounded-lg px-3 py-3 text-base font-semibold text-charcoal hover:bg-cream"
+              <li key={link.href + link.label}>
+                <NavAnchor
+                  link={link}
                   onClick={() => setOpen(false)}
-                >
-                  {link.label}
-                </a>
+                  className="block rounded-lg px-3 py-3 text-base font-semibold text-charcoal hover:bg-cream"
+                />
               </li>
             ))}
             <li>
               <a
                 href={ORDER_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-2 block rounded-full bg-diner-red px-4 py-3 text-center font-bold text-white"
                 onClick={() => setOpen(false)}
               >
-                Order Now
+                Order Online
               </a>
             </li>
           </ul>

@@ -1,4 +1,14 @@
-import { NAV_LINKS, ADDRESS, PHONE, PHONE_HREF, HOURS } from '../data/siteData'
+import {
+  FOOTER_LINKS,
+  ADDRESS,
+  PHONE,
+  PHONE_HREF,
+  EMAIL,
+  EMAIL_HREF,
+  HOURS,
+  ORDER_URL,
+  COPYRIGHT,
+} from '../data/siteData'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -12,35 +22,32 @@ export default function Footer() {
               Good <span className="text-diner-orange">Eats</span>
             </p>
             <p className="mt-3 text-sm leading-relaxed">
-              Neighborhood comfort food in Maspeth, Queens. Breakfast, lunch, and dinner — served with
-              big portions and a smile.
+              Good food, good life — hearty American favorites in Maspeth. Dine in, takeout, or delivery
+              daily 8 AM – 8:30 PM.
             </p>
-            <div className="mt-4 flex gap-3">
-              {['Facebook', 'Instagram', 'Yelp'].map((social) => (
-                <a
-                  key={social}
-                  href="#"
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-chrome/40 text-xs font-bold text-chrome-light transition-colors hover:border-chrome hover:text-white"
-                  aria-label={social}
-                >
-                  {social[0]}
-                </a>
-              ))}
-            </div>
           </div>
 
           <div>
             <h3 className="font-heading text-lg font-bold text-white">Navigate</h3>
             <ul className="mt-4 space-y-2">
-              {NAV_LINKS.map((link) => (
-                <li key={link.href}>
-                  <a href={link.href} className="text-sm transition-colors hover:text-white">
+              {FOOTER_LINKS.map((link) => (
+                <li key={link.label}>
+                  <a
+                    href={link.href}
+                    className="text-sm transition-colors hover:text-white"
+                    {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                  >
                     {link.label}
                   </a>
                 </li>
               ))}
               <li>
-                <a href="#order" className="text-sm transition-colors hover:text-white">
+                <a
+                  href={ORDER_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-semibold text-diner-orange transition-colors hover:text-white"
+                >
                   Order Online
                 </a>
               </li>
@@ -67,12 +74,20 @@ export default function Footer() {
                   {PHONE}
                 </a>
               </p>
+              <p>
+                <a href={EMAIL_HREF} className="transition-colors hover:text-white">
+                  {EMAIL}
+                </a>
+              </p>
             </address>
           </div>
         </div>
 
         <div className="mt-10 border-t border-charcoal-light pt-6 text-center text-sm text-chrome">
-          <p>&copy; {year} Good Eats. All rights reserved. Demo redesign.</p>
+          <p>
+            &copy; {year} {COPYRIGHT} All rights reserved.
+          </p>
+          <p className="mt-1 text-xs">Website redesign demo · Menu & ordering via goodeatsdinerny.com</p>
         </div>
       </div>
     </footer>

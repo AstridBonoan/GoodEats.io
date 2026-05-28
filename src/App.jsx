@@ -6,6 +6,7 @@ import MenuCategories from './components/MenuCategories'
 import About from './components/About'
 import Gallery from './components/Gallery'
 import Reviews from './components/Reviews'
+import Rewards from './components/Rewards'
 import OrderingCTA from './components/OrderingCTA'
 import Location from './components/Location'
 import Footer from './components/Footer'
@@ -23,6 +24,7 @@ export default function App() {
         <About />
         <Gallery />
         <Reviews />
+        <Rewards />
         <OrderingCTA />
         <Location />
       </main>
