@@ -1,19 +1,16 @@
-import { ORDER_URL, MENU_URL, HERO_HEADLINE, HERO_SUBHEADLINE, TAGLINE } from '../data/siteData'
-
-const HERO_IMAGE =
-  'https://images.unsplash.com/photo-1550547660-d9450f859349?w=1400&q=85&auto=format&fit=crop'
+import { ORDER_URL, MENU_URL, HERO_HEADLINE, HERO_SUBHEADLINE, TAGLINE, IMAGES } from '../data/siteData'
 
 export default function Hero() {
   return (
     <section className="relative min-h-[85vh] overflow-hidden pt-16 md:min-h-[90vh]">
       <div className="absolute inset-0">
         <img
-          src={HERO_IMAGE}
-          alt="Good Eats diner comfort food — burgers, breakfast, and homestyle favorites"
-          className="h-full w-full object-cover"
+          src={IMAGES.hero}
+          alt="Good Eats storefront on Grand Ave in Maspeth, Queens"
+          className="h-full w-full object-cover object-center"
           fetchPriority="high"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-charcoal/85 via-charcoal/70 to-charcoal/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-charcoal/88 via-charcoal/65 to-charcoal/35" />
       </div>
 
       <div className="relative mx-auto flex max-w-6xl flex-col justify-center px-4 py-20 md:px-6 md:py-28">

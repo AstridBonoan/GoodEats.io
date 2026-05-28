@@ -1,4 +1,4 @@
-import { MENU_URL } from '../data/siteData'
+import { MENU_URL, IMAGES } from '../data/siteData'
 
 export default function About() {
   return (
@@ -7,8 +7,8 @@ export default function About() {
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
           <div className="overflow-hidden rounded-2xl shadow-lg">
             <img
-              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700&q=80&auto=format&fit=crop"
-              alt="Good Eats diner — neighborhood spot on Grand Ave in Maspeth"
+              src={IMAGES.about}
+              alt="Inside Good Eats diner with chalkboard menu and booth seating"
               className="aspect-[4/3] w-full object-cover"
               loading="lazy"
             />

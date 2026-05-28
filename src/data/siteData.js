@@ -16,6 +16,23 @@ export const ORDER_URL = ROUTES.order
 export const MENU_URL = ROUTES.menu
 export const REWARDS_URL = ROUTES.rewards
 
+const IMG = (file) => `${import.meta.env.BASE_URL}images/${file}`
+
+export const IMAGES = {
+  hero: IMG('storefront.jpg'),
+  about: IMG('diner-interior.jpg'),
+  siestaEggSando: IMG('siesta-egg-sando.jpg'),
+  burger: IMG('burger.jpg'),
+  frenchToast: IMG('french-toast.jpg'),
+  chickenSalad: IMG('chicken-salad.jpg'),
+  wings: IMG('wings.jpg'),
+  macAndCheese: IMG('mac-and-cheese-plate.jpg'),
+  appetizerPlatter: IMG('appetizer-platter.jpg'),
+  fishAndChips: IMG('fish-and-chips.jpg'),
+  hotChocolate: IMG('hot-chocolate.jpg'),
+  dinerGuests: IMG('diner-guests.jpg'),
+}
+
 export const PHONE = '(718) 478-2420'
 export const PHONE_HREF = 'tel:+17184782420'
 export const EMAIL = 'goodeatsdinerNY@gmail.com'
@@ -57,48 +74,42 @@ export const FEATURED_DISHES = [
     title: 'Siesta Egg Sando',
     description: 'Fried eggs, avocado, chorizo, chipotle mayo on a brioche bun.',
     price: '$12.50',
-    image:
-      'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=600&q=80&auto=format&fit=crop',
+    image: IMAGES.siestaEggSando,
   },
   {
     id: 'mademoiselle-egg-sando',
     title: 'The Mademoiselle Egg Sando',
     description: 'Scrambled eggs, ham, Gruyère, grilled tomatoes, avocado, garlic aioli on bagel.',
     price: '$12.50',
-    image:
-      'https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=600&q=80&auto=format&fit=crop',
+    image: IMAGES.frenchToast,
   },
   {
     id: 'new-york-egg-sando',
     title: 'New York Egg Sando',
     description: 'Egg whites, Swiss, baby spinach, green apple, avocado on 8-grain bread.',
     price: '$12.50',
-    image:
-      'https://images.unsplash.com/photo-1484723091739-30a097fc8f51?w=600&q=80&auto=format&fit=crop',
+    image: IMAGES.chickenSalad,
   },
   {
     id: 'brain-food-egg-sando',
     title: 'Brain Food Egg Sando',
     description: 'Egg whites, turkey, avocado, grilled tomato & Gruyère.',
     price: '$12.50',
-    image:
-      'https://images.unsplash.com/photo-1506084868230-bb9d95c24759?w=600&q=80&auto=format&fit=crop',
+    image: IMAGES.burger,
   },
   {
     id: 'peasant-omelette',
     title: 'Peasant Omelette',
     description: 'Bacon, potato, mozzarella, tomato & onion with potatoes and toast.',
     price: '$18.00+',
-    image:
-      'https://images.unsplash.com/photo-1525351484163-7529414344d8?w=600&q=80&auto=format&fit=crop',
+    image: IMAGES.macAndCheese,
   },
   {
     id: 'turkey-triple-decker',
     title: 'Turkey Triple Decker',
     description: 'Bacon, lettuce & tomato — served with French fries or potato salad.',
     price: '$19.50',
-    image:
-      'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=600&q=80&auto=format&fit=crop',
+    image: IMAGES.appetizerPlatter,
   },
 ]
 
@@ -213,30 +224,18 @@ export const MENU_HIGHLIGHTS = [
 ]
 
 export const GALLERY_IMAGES = [
-  {
-    src: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&q=80&auto=format&fit=crop',
-    alt: 'Breakfast sandwich with egg, avocado, and sausage',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=500&q=80&auto=format&fit=crop',
-    alt: 'Pancakes with whipped cream and toppings',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1550547660-d9450f859349?w=500&q=80&auto=format&fit=crop',
-    alt: 'Diner burger with toppings',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&q=80&auto=format&fit=crop',
-    alt: 'Hot chocolate with whipped cream',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=500&q=80&auto=format&fit=crop',
-    alt: 'Diner seating and neighborhood atmosphere',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?w=500&q=80&auto=format&fit=crop',
-    alt: 'Hearty omelette breakfast plate',
-  },
+  { src: IMAGES.siestaEggSando, alt: 'Siesta Egg Sando with chorizo, avocado, and fried egg' },
+  { src: IMAGES.frenchToast, alt: 'French toast with strawberries, whipped cream, and syrup' },
+  { src: IMAGES.burger, alt: 'Good Eats burger with bacon and fries' },
+  { src: IMAGES.wings, alt: 'Buffalo wings with ranch dipping sauce' },
+  { src: IMAGES.appetizerPlatter, alt: 'Appetizer platter with onion rings, tenders, and sauces' },
+  { src: IMAGES.macAndCheese, alt: 'Mac and cheese with sweet potatoes and dinner roll' },
+  { src: IMAGES.chickenSalad, alt: 'Grilled chicken salad with avocado and cranberries' },
+  { src: IMAGES.fishAndChips, alt: 'Fish and chips with pickles and coleslaw' },
+  { src: IMAGES.hotChocolate, alt: 'Hot chocolate with whipped cream and chocolate drizzle' },
+  { src: IMAGES.dinerInterior, alt: 'Good Eats diner interior with chalkboard menu' },
+  { src: IMAGES.dinerGuests, alt: 'Guests enjoying sandwiches at Good Eats' },
+  { src: IMAGES.storefront, alt: 'Good Eats storefront on Grand Ave, Maspeth' },
 ]
 
 export const REVIEWS = [

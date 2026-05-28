@@ -6,21 +6,16 @@ export default function Gallery() {
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <div className="mb-8 text-center md:mb-10">
           <h2 className="font-heading text-3xl font-bold text-charcoal md:text-4xl">Inside Good Eats</h2>
-          <p className="mt-2 text-charcoal-light">Food, coffee, and classic diner atmosphere</p>
+          <p className="mt-2 text-charcoal-light">Real food, real neighborhood vibes</p>
         </div>
 
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4">
-          {GALLERY_IMAGES.map((img, i) => (
-            <div
-              key={img.alt}
-              className={`overflow-hidden rounded-2xl ${i === 0 ? 'col-span-2 row-span-1 md:col-span-2 md:row-span-2' : ''}`}
-            >
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 lg:gap-4">
+          {GALLERY_IMAGES.map((img) => (
+            <div key={img.src} className="aspect-square overflow-hidden rounded-2xl">
               <img
                 src={img.src}
                 alt={img.alt}
-                className={`w-full object-cover transition-transform duration-300 hover:scale-105 ${
-                  i === 0 ? 'aspect-[2/1] md:aspect-auto md:h-full md:min-h-[320px]' : 'aspect-square'
-                }`}
+                className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
                 loading="lazy"
               />
             </div>
